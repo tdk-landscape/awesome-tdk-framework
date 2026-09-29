@@ -330,10 +330,4 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 
 ## Contributing to this catalog
 
-Suggest additions or corrections with an [issue](https://github.com/tdk-landscape/awesome-tdk-framework/issues) or pull request. Add each resource under one heading using this format:
-
-```text
-- [Project or resource](https://example.org): concise description. **Official**, **Community**, or **Archived**
-```
-
-Include public resources that help people use or extend TDK. Prefer canonical links, check the destination, avoid duplicates, and label community or archived projects. Maintainers may ask for context, move an entry, or decline links that are inaccessible, unrelated, promotional, or no longer useful.
+Suggest additions through an [issue](https://github.com/tdk-landscape/awesome-tdk-framework/issues) or pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the inclusion criteria, labels, and submission steps.
