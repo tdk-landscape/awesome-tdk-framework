@@ -59,8 +59,8 @@ Live checks, end-to-end coverage, and benchmark records for the core framework.
 | --- | --- |
 | Continuous integration | [Core CI workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/ci.yml) validates the main repository checks. **Official** |
 | Quickstart coverage | [Quickstart E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/quickstart-e2e.yml) exercises the documented first-run path. **Official** |
-| Example coverage | [Examples E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/examples-e2e.yml) runs checks against the example applications. **Official** |
-| Scale coverage | [ERP scale E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/erp-scale-e2e.yml) exercises the 100-service ERP landscape. **Official** |
+| Example coverage | [Examples E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/examples-e2e.yml) boots the [restaurant example](https://github.com/tdk-landscape/tdk-restaurant-example) and [SaaS starter](https://github.com/tdk-landscape/tdk-saas-starter) on a clean runner, then checks real API routes and frontend pages, not only `/health`. **Official** |
+| Scale coverage | [ERP scale E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/erp-scale-e2e.yml) exercises the 100-service ERP landscape. [Successful run from Sep 28, 2026](https://github.com/tdk-landscape/tdk-cli-core/actions/runs/36397677358). **Official** |
 | Scale fixture | [tdk-erp-system](https://github.com/tdk-landscape/tdk-erp-system) is the multi-domain fixture used for scale testing. **Official** |
 | Recorded results | [Benchmark results](https://github.com/tdk-landscape/tdk-cli-core/tree/main/benchmarks/results) contains timestamped raw result files. **Official** |
 | Reproduction guide | [100 microservices on a 16GB laptop](https://dev.to/mynameis0d3c53a3/we-ran-100-microservices-on-a-16gb-laptop-no-kubernetes-590e) describes a community-run benchmark and setup. **Community** |
