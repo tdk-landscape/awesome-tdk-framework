@@ -14,6 +14,8 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [Examples and demo applications](#examples-and-demo-applications)
 - [Starters and scaffolding](#starters-and-scaffolding)
 - [Integrations and supporting tools](#integrations-and-supporting-tools)
+- [Development, deployment, and observability](#development-deployment-and-observability)
+- [Security and identity](#security-and-identity)
 - [Extensions and historical projects](#extensions-and-historical-projects)
 - [Community and contribution](#community-and-contribution)
 - [Contributing to this catalog](#contributing-to-this-catalog)
@@ -38,11 +40,11 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 ## Documentation and reference
 
 - [TDK documentation](https://tdk-landscape.github.io/tdk-website/) — guides, concepts, and reference material. **Official**
+- [tdk-website](https://github.com/tdk-landscape/tdk-website) — source for the official documentation and project site. **Official**
 - [Examples guide](https://tdk-landscape.github.io/tdk-website/docs/examples/) — walkthroughs of projects built with TDK. **Official**
 - [Core repository README](https://github.com/tdk-landscape/tdk-cli-core#readme) — installation, quick start, architecture, feature overview, and FAQ. **Official**
 - [Core repository docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs) — detailed framework documentation. **Official**
 - [Contributing to tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core/blob/main/CONTRIBUTING.md) — development setup and contribution workflow. **Official**
-- [Security policy](https://github.com/tdk-landscape/tdk-cli-core/blob/main/SECURITY.md) — responsible vulnerability reporting. **Official**
 
 ## Learning and articles
 
@@ -149,7 +151,7 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [Why TDK Is Not a Cloud IDE](https://tdk-landscape.github.io/tdk-website/blog/articles/why-tdk-is-not-a-cloud-ide/) — The difference between renting a remote machine and generating a better local development surface. **Official**
 - [Why TDK Matters After the Spec](https://tdk-landscape.github.io/tdk-website/blog/articles/why-tdk-matters-after-the-spec/) — A closing argument for pairing spec-driven thinking with a development workbench that can actually run the system. **Official**
 
-- [TDK demo animation](https://tdk-landscape.github.io/tdk-demo-animation/) — short visual tour of the CLI workflow and generated project. **Official**
+- [TDK demo animation](https://github.com/tdk-landscape/tdk-demo-animation) — source for a short visual tour of the CLI workflow and generated project ([view the animation](https://tdk-landscape.github.io/tdk-demo-animation/)). **Official**
 
 ## Examples and demo applications
 
@@ -157,10 +159,7 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [tdk-saas-starter](https://github.com/tdk-landscape/tdk-saas-starter) — SaaS dashboard starter with a working checkout flow. **Official**
 - [tdk-restaurant-example](https://github.com/tdk-landscape/tdk-restaurant-example) — restaurant operations example covering reservations, kitchen pacing, menu availability, and floor control. **Official**
 - [tdk-ecommerce-example](https://github.com/tdk-landscape/tdk-ecommerce-example) — Vue storefront and Hono catalog API built with TDK. **Official**
-- [tdk-auth-queue-email-example](https://github.com/tdk-landscape/tdk-auth-queue-email-example) — local identity, queue, and email example with an OIDC emulator, NATS JetStream, and Mailpit. **Official**
-- [tdk-user-management](https://github.com/tdk-landscape/tdk-user-management) — identity and user-management demo organized into TDK stacks. **Official**
 - [tdk-erp-system](https://github.com/tdk-landscape/tdk-erp-system) — 100-service ERP fixture across seven business domains, used for scale testing. **Official**
-- [tdk-docker-compose-example](https://github.com/tdk-landscape/tdk-docker-compose-example) — example of using the TDK CLI from Docker Compose. **Official**
 
 ## Starters and scaffolding
 
@@ -179,8 +178,21 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [NATS](https://nats.io/) — messaging system demonstrated with JetStream in the auth/queue/email example. **External project**
 - [PostgreSQL](https://www.postgresql.org/) — database used in TDK's local platform examples. **External project**
 
+## Development, deployment, and observability
+
+- [Feature reference](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/FEATURES.md) — project and resource features, including monitoring, ELK, Debezium CDC, and local registry options. **Official**
+- [100-service benchmark results](https://github.com/tdk-landscape/tdk-cli-core/tree/main/benchmarks/results) — raw results from the TDK landscape scale benchmark. **Official**
+- [tdk-docker-compose-example](https://github.com/tdk-landscape/tdk-docker-compose-example) — run the TDK CLI and its development workflow from Docker Compose. **Official**
+
+## Security and identity
+
+- [Security policy](https://github.com/tdk-landscape/tdk-cli-core/blob/main/SECURITY.md) — responsible vulnerability reporting for the core project. **Official**
+- [tdk-auth-queue-email-example](https://github.com/tdk-landscape/tdk-auth-queue-email-example) — local identity, queue, and email example with an OIDC emulator, NATS JetStream, and Mailpit. **Official**
+- [tdk-user-management](https://github.com/tdk-landscape/tdk-user-management) — identity and user-management demo organized into TDK stacks. **Official**
+
 ## Extensions and historical projects
 
+- [Current CLI extensions](https://github.com/tdk-landscape/tdk-cli-core/tree/main/ext) — extension and IDE integration source maintained in the core monorepo. **Official**
 - [tdk-discovery](https://github.com/tdk-landscape/tdk-discovery) — **Archived.** Earlier standalone service-discovery repository; current development is in [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core).
 - [tdk-ext](https://github.com/tdk-landscape/tdk-ext) — **Archived.** Earlier extensions repository; use the current [tdk-cli-core extension documentation](https://github.com/tdk-landscape/tdk-cli-core/tree/main/ext) for current work.
 - [tdk](https://github.com/tdk-landscape/tdk) — **Archived.** Earlier platform specifications and generators repository; consult the current core repository and website for maintained material.
@@ -188,6 +200,7 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 ## Community and contribution
 
 - [TDK organization](https://github.com/tdk-landscape) — official public repositories and projects.
+- [Organization profile source](https://github.com/tdk-landscape/.github/tree/main/profile) — source for the public TDK organization profile.
 - [Open an issue on tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core/issues) — ask questions, report a bug, or suggest a framework improvement.
 - [Good first issues](https://github.com/tdk-landscape/tdk-cli-core/labels/good%20first%20issue) — beginner-friendly ways to contribute to the core project.
 
