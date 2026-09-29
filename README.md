@@ -26,12 +26,8 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 | See working applications | [Examples and demos](#examples-and-demo-applications) / [Starters](#starters-and-scaffolding) |
 | Check project health and scale | [CI and benchmarks](#ci-and-benchmarks) |
 | Learn design patterns and context | [All articles by topic](#learning-and-articles) |
-| Extend or integrate TDK | [Integrations](#integrations-and-supporting-tools) / [Extensions](#extensions-and-historical-projects) |
-| Contribute a resource | [Contribution guide](CONTRIBUTING.md) |
-
-### Browse by topic
-
-[Core](#core-framework-and-releases) | [Docs](#documentation-and-reference) | [Articles](#learning-and-articles) | [Examples](#examples-and-demo-applications) | [Starters](#starters-and-scaffolding) | [Integrations](#integrations-and-supporting-tools) | [CI and benchmarks](#ci-and-benchmarks) | [Security](#security-and-identity) | [Extensions](#extensions-and-historical-projects) | [Community](#community-and-contribution)
+| Explore the wider stack | [Tools and technologies](#tools-and-technologies) |
+| Extend TDK or contribute | [Extensions](#extensions-and-historical-projects) / [Contribution guide](CONTRIBUTING.md) |
 
 ## Start here
 
@@ -310,16 +306,91 @@ For current run state, open a workflow above. Result files are point-in-time rec
 - [create-tdk-stack](https://github.com/tdk-landscape/create-tdk-stack): starter generator and landing page for creating a TDK stack. **Official**
 - [More example repositories](https://github.com/tdk-landscape?tab=repositories&q=example): browse public TDK example repositories. **Official**
 
-## Integrations and supporting tools
+## Tools and technologies
 
-- [Tilt](https://tilt.dev/): local development orchestration that TDK configures and runs. **External project**
-- [Docker](https://www.docker.com/): container runtime used by TDK's local development workflow. **External project**
-- [Traefik](https://traefik.io/traefik/): local ingress and routing used in TDK examples. **External project**
-- [Bun](https://bun.sh/): JavaScript runtime used by generated services and supported for CLI installation. **External project**
-- [Vue](https://vuejs.org/): frontend framework used by the ecommerce and auth/queue/email examples. **External project**
-- [Hono](https://hono.dev/): web framework used by TDK backend examples. **External project**
-- [NATS](https://nats.io/): messaging system demonstrated with JetStream in the auth/queue/email example. **External project**
-- [PostgreSQL](https://www.postgresql.org/): database used in TDK's local platform examples. **External project**
+TDK works across a broad local-development stack. This index separates core requirements from generated app technology, optional infrastructure, official example integrations, and contributor tooling. Optional means a feature can be enabled when needed; paid items require a TDK license. Each group links to TDK's feature reference, source manifest, or example for context.
+
+**Stack at a glance:** [Node.js](https://nodejs.org/en) for the CLI | [Bun](https://bun.sh/docs) for service workflows | [Prisma](https://www.prisma.io/docs) as an opt-in database workflow | [PostgreSQL](https://www.postgresql.org/docs/) | [Docker](https://docs.docker.com/) | [Tilt](https://docs.tilt.dev/) | [Traefik](https://doc.traefik.io/traefik/) | [Vite](https://vite.dev/) | [Vue](https://vuejs.org/) | [Hono](https://hono.dev/) | [NATS](https://docs.nats.io/).
+
+<details>
+<summary>Languages, runtimes, and build tools (7)</summary>
+
+- [Node.js](https://nodejs.org/en): required runtime when installing the CLI from npm; prebuilt binaries are also available. **Core runtime**
+- [Bun](https://bun.sh/docs): supported CLI installer and runtime/package tool used by generated services. **Core and generated apps**
+- [npm](https://docs.npmjs.com/): publishes and installs the TDK CLI package; generated services can use a local registry. **Core and optional service**
+- [TypeScript](https://www.typescriptlang.org/docs/): implementation language for the CLI and generated service configuration. **Core and generated apps**
+- [Starlark](https://github.com/bazelbuild/starlark): language used by the Tilt topology and resource generators. **Core engine**
+- [Bash](https://savannah.gnu.org/projects/bash/): used by install, release, and generated container scripts. **Core scripts**
+- [Vite](https://vite.dev/): generated frontend development and build configuration. **Generated apps**
+
+TDK references: [core repository and install methods](https://github.com/tdk-landscape/tdk-cli-core), [CLI package manifest](https://github.com/tdk-landscape/tdk-cli-core/blob/main/cli/package.json), [feature reference](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/FEATURES.md).
+
+</details>
+
+<details>
+<summary>Application frameworks and CLI libraries (6)</summary>
+
+- [React](https://react.dev/): default frontend framework and the rendering foundation for TDK's terminal interface. **Core and generated apps**
+- [Vue](https://vuejs.org/): supported frontend framework, also used in official ecommerce and identity examples. **Generated apps and examples**
+- [Hono](https://hono.dev/): TypeScript web framework used for backend APIs in official examples. **Examples**
+- [Ink](https://github.com/vadimdemedes/ink): React components for the interactive CLI interface. **Core CLI**
+- [Commander.js](https://github.com/tj/commander.js): command and option parsing for the `tdk` CLI. **Core CLI**
+- [Handlebars](https://handlebarsjs.com/): templates used to generate service files and configuration. **Core generator**
+
+TDK references: [CLI dependencies](https://github.com/tdk-landscape/tdk-cli-core/blob/main/cli/package.json), [frontend framework providers](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/frontend-framework-providers.md), [ecommerce example](https://github.com/tdk-landscape/tdk-ecommerce-example), [auth, queue, and email example](https://github.com/tdk-landscape/tdk-auth-queue-email-example).
+
+</details>
+
+<details>
+<summary>Local infrastructure, databases, and messaging (8)</summary>
+
+- [Docker](https://docs.docker.com/): builds and runs the local service containers. **Core requirement**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/), [OrbStack](https://orbstack.dev/), and [Colima](https://github.com/abiosoft/colima): supported local Docker environments for macOS development. **Docker options**
+- [Docker Compose](https://docs.docker.com/compose/): describes supporting services and local infrastructure. **Core and examples**
+- [Tilt](https://docs.tilt.dev/): orchestrates the landscape and provides the live development loop. **Core requirement**
+- [Traefik](https://doc.traefik.io/traefik/): routes local traffic to services through stable development URLs. **Core service**
+- [PostgreSQL](https://www.postgresql.org/docs/): default local database service. **Core service**
+- [Prisma](https://www.prisma.io/docs): opt-in schema, client, and migration workflow for backend resources. **Optional generator**
+- [NATS](https://docs.nats.io/), including [JetStream](https://docs.nats.io/nats-concepts/jetstream): messaging and persistence demonstrated in TDK's queue example. **Optional service and example**
+
+TDK references: [feature reference](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/FEATURES.md), [core architecture and requirements](https://github.com/tdk-landscape/tdk-cli-core#requirements), [auth, queue, and email example](https://github.com/tdk-landscape/tdk-auth-queue-email-example).
+
+</details>
+
+<details>
+<summary>Observability, data movement, identity, and email (10)</summary>
+
+- [Debezium](https://debezium.io/documentation/): optional change data capture from PostgreSQL. **Optional infrastructure**
+- [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html): search and storage component in the optional ELK stack. **Optional infrastructure**
+- [Logstash](https://www.elastic.co/guide/en/logstash/current/index.html): collection and processing component in the optional ELK stack. **Optional infrastructure**
+- [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html): exploration interface in the optional ELK stack. **Optional infrastructure**
+- [SigNoz](https://signoz.io/docs/): observability option for metrics, traces, and logs. **Optional infrastructure**
+- [Apache SkyWalking](https://skywalking.apache.org/docs/): alternative observability option listed by TDK. **Optional infrastructure**
+- [OpenID Connect](https://openid.net/developers/how-connect-works/): identity protocol demonstrated by the auth emulator and protected API example. **Example integration**
+- [Mailpit](https://mailpit.axllent.org/): local email capture and inspection in the auth and email example. **Example integration**
+- [Verdaccio](https://www.verdaccio.org/docs/installation/): private local npm registry. Requires a TDK license. **Paid optional service**
+- [Sablier](https://sablierapp.dev/): on-demand service start and stop. Requires a TDK license. **Paid optional service**
+
+TDK references: [optional infrastructure and premium features](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/FEATURES.md), [auth, queue, and email example](https://github.com/tdk-landscape/tdk-auth-queue-email-example).
+
+</details>
+
+<details>
+<summary>Testing, quality, and delivery (9)</summary>
+
+- [Biome](https://biomejs.dev/): linting and formatting in the CLI workspace. **Core development**
+- [Vitest](https://vitest.dev/): unit and integration test runner for the CLI. **Core development**
+- [Knip](https://knip.dev/): detects unused files, exports, and dependencies. **Core development**
+- [Playwright](https://playwright.dev/): browser test configuration available through a licensed TDK extension. **Paid generator**
+- [GitHub Actions](https://docs.github.com/actions): runs CI, quickstart, examples, scale, and release workflows. **Core delivery**
+- [GitHub CLI](https://cli.github.com/): dispatches follow-up CI runs from the repository workflow. **Core delivery**
+- [Dependabot](https://docs.github.com/code-security/dependabot): automated dependency updates for GitHub repositories. **Repository maintenance**
+- [GNU Make](https://www.gnu.org/software/make/): common contributor commands such as `make test` and `make help`. **Core development**
+- [pre-commit](https://pre-commit.com/): local hook runner configured for the core repository. **Core development**
+
+TDK references: [CLI scripts and dependencies](https://github.com/tdk-landscape/tdk-cli-core/blob/main/cli/package.json), [CI workflows](https://github.com/tdk-landscape/tdk-cli-core/tree/main/.github/workflows), [repository hook configuration](https://github.com/tdk-landscape/tdk-cli-core/blob/main/.pre-commit-config.yaml).
+
+</details>
 
 ## Development, deployment, and observability
 
