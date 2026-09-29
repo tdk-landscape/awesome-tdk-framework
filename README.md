@@ -3,32 +3,35 @@
 A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, integrations, and community resources for running a microservice landscape locally with Docker and Tilt.
 
 <p>
+  <a href="https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/ci.yml"><img alt="Core CI status" src="https://img.shields.io/github/actions/workflow/status/tdk-landscape/tdk-cli-core/ci.yml?branch=main&style=flat-square&label=CI&color=EE924E"></a>
+  <a href="https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/erp-scale-e2e.yml"><img alt="ERP scale end-to-end status" src="https://img.shields.io/github/actions/workflow/status/tdk-landscape/tdk-cli-core/erp-scale-e2e.yml?branch=main&style=flat-square&label=Scale%20E2E&color=EE924E"></a>
   <a href="https://github.com/tdk-landscape/tdk-cli-core"><img alt="Core repository stars" src="https://img.shields.io/github/stars/tdk-landscape/tdk-cli-core?style=flat-square&color=EE924E"></a>
   <a href="https://www.npmjs.com/package/@tdk-landscape/tdk-cli-core"><img alt="TDK CLI npm version" src="https://img.shields.io/npm/v/%40tdk-landscape/tdk-cli-core?style=flat-square&color=EE924E"></a>
   <a href="https://github.com/tdk-landscape/tdk-cli-core/blob/main/LICENSE"><img alt="Core project license" src="https://img.shields.io/github/license/tdk-landscape/tdk-cli-core?style=flat-square&color=EE924E"></a>
 </p>
 
-[Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) | [Core repository](https://github.com/tdk-landscape/tdk-cli-core) | [Examples](https://tdk-landscape.github.io/tdk-website/docs/examples/) | [Article index](https://tdk-landscape.github.io/tdk-website/blog/)
+[Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) | [Core repository](https://github.com/tdk-landscape/tdk-cli-core) | [Examples](https://tdk-landscape.github.io/tdk-website/docs/examples/) | [CI and benchmarks](#ci-and-benchmarks) | [Article index](https://tdk-landscape.github.io/tdk-website/blog/)
 
 > [!NOTE]
 > This catalog is for the TDK microservice development framework from [tdk-landscape](https://github.com/tdk-landscape). TDK is an independent project built on [Tilt](https://tilt.dev); it is not affiliated with the electronics company also named TDK.
 
-**Labels:** **Official** is maintained by TDK; **Community** is independently maintained; **External project** is a tool TDK uses; **Archived** marks a discontinued repository.
+**How to read this index:** **Official** is maintained by TDK; **Community** is independently maintained; **External project** is a tool TDK uses; **Archived** marks a discontinued repository.
 
-## Contents
+## Explore the landscape
 
-- [Start here](#start-here)
-- [Core framework and releases](#core-framework-and-releases)
-- [Documentation and reference](#documentation-and-reference)
-- [Learning and articles](#learning-and-articles)
-- [Examples and demo applications](#examples-and-demo-applications)
-- [Starters and scaffolding](#starters-and-scaffolding)
-- [Integrations and supporting tools](#integrations-and-supporting-tools)
-- [Development, deployment, and observability](#development-deployment-and-observability)
-- [Security and identity](#security-and-identity)
-- [Extensions and historical projects](#extensions-and-historical-projects)
-- [Community and contribution](#community-and-contribution)
-- [Contributing to this catalog](#contributing-to-this-catalog)
+| If you want to... | Start with |
+| --- | --- |
+| Install and run TDK | [Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) |
+| Understand the framework | [Core framework](#core-framework-and-releases) / [Documentation](#documentation-and-reference) |
+| See working applications | [Examples and demos](#examples-and-demo-applications) / [Starters](#starters-and-scaffolding) |
+| Check project health and scale | [CI and benchmarks](#ci-and-benchmarks) |
+| Learn design patterns and context | [All articles by topic](#learning-and-articles) |
+| Extend or integrate TDK | [Integrations](#integrations-and-supporting-tools) / [Extensions](#extensions-and-historical-projects) |
+| Contribute a resource | [Contribution guide](CONTRIBUTING.md) |
+
+### Browse by topic
+
+[Core](#core-framework-and-releases) | [Docs](#documentation-and-reference) | [Articles](#learning-and-articles) | [Examples](#examples-and-demo-applications) | [Starters](#starters-and-scaffolding) | [Integrations](#integrations-and-supporting-tools) | [CI and benchmarks](#ci-and-benchmarks) | [Security](#security-and-identity) | [Extensions](#extensions-and-historical-projects) | [Community](#community-and-contribution)
 
 ## Start here
 
@@ -51,6 +54,22 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [Examples guide](https://tdk-landscape.github.io/tdk-website/docs/examples/): walkthroughs of projects built with TDK. **Official**
 - [Core repository docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs): detailed framework documentation. **Official**
 - [Contributing to tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core/blob/main/CONTRIBUTING.md): development setup and contribution workflow. **Official**
+
+## CI and benchmarks
+
+Live checks, end-to-end coverage, and benchmark records for the core framework.
+
+| Signal | Resource |
+| --- | --- |
+| Continuous integration | [Core CI workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/ci.yml) validates the main repository checks. **Official** |
+| Quickstart coverage | [Quickstart E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/quickstart-e2e.yml) exercises the documented first-run path. **Official** |
+| Example coverage | [Examples E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/examples-e2e.yml) runs checks against the example applications. **Official** |
+| Scale coverage | [ERP scale E2E workflow](https://github.com/tdk-landscape/tdk-cli-core/actions/workflows/erp-scale-e2e.yml) exercises the 100-service ERP landscape. **Official** |
+| Scale fixture | [tdk-erp-system](https://github.com/tdk-landscape/tdk-erp-system) is the multi-domain fixture used for scale testing. **Official** |
+| Recorded results | [Benchmark results](https://github.com/tdk-landscape/tdk-cli-core/tree/main/benchmarks/results) contains timestamped raw result files. **Official** |
+| Reproduction guide | [100 microservices on a 16GB laptop](https://dev.to/mynameis0d3c53a3/we-ran-100-microservices-on-a-16gb-laptop-no-kubernetes-590e) describes a community-run benchmark and setup. **Community** |
+
+For current run state, open a workflow above. Result files are point-in-time records, not a live performance dashboard.
 
 ## Learning and articles
 
@@ -305,7 +324,6 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 ## Development, deployment, and observability
 
 - [Feature reference](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/FEATURES.md): project and resource features, including monitoring, ELK, Debezium CDC, and local registry options. **Official**
-- [100-service benchmark results](https://github.com/tdk-landscape/tdk-cli-core/tree/main/benchmarks/results): raw results from the TDK landscape scale benchmark. **Official**
 - [tdk-docker-compose-example](https://github.com/tdk-landscape/tdk-docker-compose-example): run the TDK CLI and its development workflow from Docker Compose. **Official**
 
 ## Security and identity
