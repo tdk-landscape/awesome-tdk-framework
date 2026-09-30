@@ -34,6 +34,9 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [TDK website](https://tdk-landscape.github.io/tdk-website/): overview, documentation, and project news. **Official**
 - [Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/): install TDK and run your first local stack. **Official**
 - [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core): the main public monorepo for the CLI, Tilt engine, and service discovery. **Official**
+  - Install: `npm i -g @tdk-landscape/tdk-cli-core` or [the install script](https://tdk-landscape.github.io/install.sh).
+  - Run: `tdk doctor` then `tdk project example` / `tdk up`.
+  - Issues: [tdk-cli-core issue tracker](https://github.com/tdk-landscape/tdk-cli-core/issues) only. This `awesome-tdk-framework` catalog is not the CLI.
 
 ## Core framework and releases
 
@@ -292,6 +295,31 @@ For current run state, open a workflow above. Result files are point-in-time rec
 </details>
 
 - [TDK demo animation](https://github.com/tdk-landscape/tdk-demo-animation): source for a short visual tour of the CLI workflow and generated project ([view the animation](https://tdk-landscape.github.io/tdk-demo-animation/)). **Official**
+
+## Notes and gists
+
+Short public notes. These are **not** product reviews.
+
+**Official** = written by TDK maintainers or website contributors.
+
+**Community** = independent authors.
+Prefer [tdk-cli-core docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs) when the gist and the docs disagree.
+
+| Title | URL | Topic | Label | Maps to |
+| --- | --- | --- | --- | --- |
+| "Bind for 0.0.0.0:PORT failed: port is already allocated" every time I add a new service | [Gist](https://gist.github.com/kburym/72921806b31b037686d0539fbe9b0643) | ports | **Official** | [`tdk resources --ports`](https://github.com/tdk-landscape/tdk-cli-core) |
+| "Error: connect ECONNREFUSED 127.0.0.1" between two of my own containers — the localhost trap | [Gist](https://gist.github.com/kburym/39c7cd4e88cbcafb3e2d55fcbb13fdce) | networking | **Official** | [Traefik routes](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs) |
+| "depends_on doesn't wait for another service" — the Docker Compose startup-order trap | [Gist](https://gist.github.com/kburym/c3f873b9132ef7f622fc75359675f3fe) | compose | **Official** | [`tdk up`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
+| Cannot find module errors across my TypeScript monorepo services — the tsconfig paths trap | [Gist](https://gist.github.com/kburym/74c419dab1f9901b9a26c9c25aea20f8) | typescript | **Official** | [TypeScript wiring docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs) |
+| Bun's --hot flag silently stopped working the moment I put it in Docker. Here's why | [Gist](https://gist.github.com/kburym/f0d3b98aadc3b754cb19f108be020ef8) | bun | **Official** | [`tdk up`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
+| Minikube ate 12GB of my RAM and took 11 minutes to boot. Here's what I replaced it with | [Gist](https://gist.github.com/kburym/cefe315108b0329d52b7c06b0a92f42a) | k8s-local | **Official** | [TDK local runtime docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs) |
+| I fixed my CORS hell and port-collision nightmare by killing my Docker Compose file | [Gist](https://gist.github.com/kburym/5022d1d89c9765e039946b2601bf12ae) | ports | **Official** | [`tdk up`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
+| Building an internal developer platform? Start with the local dev loop (open-source CLI) | [Gist](https://gist.github.com/kburym/8c19fd35d154813ab2857cb88cae8e71) | idp | **Official** | [`tdk up`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
+| Cut new-developer setup time from 2 days to 8 minutes (microservices onboarding) | [Gist](https://gist.github.com/kburym/33987f91306a7dca491a785dbdd65d57) | onboarding | **Official** | [`tdk project example`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
+| Docker Compose vs Kubernetes locally: how to run microservices without a cluster (FAQ) | [Gist](https://gist.github.com/kburym/7f87dda05cd796e3dc5b2cb960ff7e32) | faq | **Official** | [TDK comparison docs](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/compare-honest.md) |
+| Run 100 microservices locally in ~8 min, no Kubernetes — quick-start for TDK CLI | [Gist](https://gist.github.com/kburym/f94342ec2d6b5a03a86f8d6a2553abd5) | quickstart | **Official** | [`tdk-cli-core` + ERP fixture](https://github.com/tdk-landscape/tdk-cli-core#fixture-bench-100-generated-services-on-one-laptop) |
+
+Maintainer notes: [kburym gists](https://gist.github.com/kburym) **Official**
 
 ## Examples and demo applications
 

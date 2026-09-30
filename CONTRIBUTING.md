@@ -14,6 +14,15 @@ Before proposing an entry, check that it:
 - Is labeled accurately as **Official**, **Community**, **External project**, or **Archived**.
 - Is maintained or still useful; mark inactive repositories as **Archived**.
 
+For gists specifically:
+
+- The gist must be public and reachable without login.
+- It must be about TDK or the local-development problems TDK claims to solve.
+- Maintainer or website-contributor gists are **Official**; third-party gists are **Community** only after a maintainer checks they are not spam.
+- Do not include paywalled or deleted gists.
+- If a gist duplicates an official article, link the article as the primary resource and describe the gist as a “short note.”
+- List each gist's stable individual permalink, one approved topic, its label, and the core/docs page or command it maps to. Gists are secondary to core documentation.
+
 Submissions that are inaccessible, unrelated, duplicative, or primarily promotional may be declined. Maintainers may ask for context or move an entry to a more suitable section.
 
 ## Entry format
