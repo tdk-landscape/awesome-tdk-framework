@@ -56,8 +56,8 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [Examples guide](https://tdk-landscape.github.io/tdk-website/docs/examples/): walkthroughs of projects built with TDK. **Official**
 - [Core repository docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs): detailed framework documentation. **Official**
 - [Contributing to tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core/blob/main/CONTRIBUTING.md): development setup and contribution workflow. **Official**
-- [MCP guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/mcp.md): MCP support in the CLI. **Official**
-- [Bring-your-own (BYO) guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/byo.md): run your own services and images in a TDK stack. **Official**
+- [MCP guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/mcp.md): scaffold a Model Context Protocol server as a resource that `tdk up` starts like any other service. **Official**
+- [Bring-your-own (BYO) guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/byo.md): wrap an existing service with TDK orchestration without generating application code. **Official**
 - [WSL2 guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/wsl2.md): run TDK on Windows through WSL2. **Official**
 - [Honest comparison](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/compare-honest.md): where TDK fits next to Compose and Kubernetes, and where it does not. **Official**
 
