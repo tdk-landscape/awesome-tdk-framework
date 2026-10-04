@@ -25,6 +25,8 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 | Understand the framework | [Core framework](#core-framework-and-releases) / [Documentation](#documentation-and-reference) |
 | See working applications | [Examples and demos](#examples-and-demo-applications) / [Starters](#starters-and-scaffolding) |
 | Check project health and scale | [CI and benchmarks](#ci-and-benchmarks) |
+| Learn step by step | [TDK Labs](#learning-and-articles) |
+| Use TDK with AI coding agents | [Agents and skills](#agents-and-skills) |
 | Learn design patterns and context | [All articles by topic](#learning-and-articles) |
 | Find short troubleshooting notes | [Notes and gists](#notes-and-gists) |
 | Explore the wider stack | [Tools and technologies](#tools-and-technologies) |
@@ -54,6 +56,10 @@ A curated map of **TDK (Tilt Development Kit)**: the CLI, guides, examples, inte
 - [Examples guide](https://tdk-landscape.github.io/tdk-website/docs/examples/): walkthroughs of projects built with TDK. **Official**
 - [Core repository docs](https://github.com/tdk-landscape/tdk-cli-core/tree/main/docs): detailed framework documentation. **Official**
 - [Contributing to tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core/blob/main/CONTRIBUTING.md): development setup and contribution workflow. **Official**
+- [MCP guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/mcp.md): scaffold a Model Context Protocol server as a resource that `tdk up` starts like any other service. **Official**
+- [Bring-your-own (BYO) guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/byo.md): wrap an existing service with TDK orchestration without generating application code. **Official**
+- [WSL2 guide](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/wsl2.md): run TDK on Windows through WSL2. **Official**
+- [Honest comparison](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/compare-honest.md): where TDK fits next to Compose and Kubernetes, and where it does not. **Official**
 
 ## CI and benchmarks
 
@@ -73,6 +79,7 @@ For current run state, open a workflow above. Result files are point-in-time rec
 
 ## Learning and articles
 
+- [TDK Labs](https://tdk-landscape.github.io/tdk-labs/) ([source](https://github.com/tdk-landscape/tdk-labs)): ordered lessons with captured CLI output, the files each command writes, and a static replay. Labs 02 and 03 are marked pending until their capture image is published. **Official**
 - [TDK blog](https://tdk-landscape.github.io/tdk-website/blog/): browse the complete official article library. **Official**
 - [We Ran 100 Microservices on a 16GB Laptop. No Kubernetes.](https://dev.to/mynameis0d3c53a3/we-ran-100-microservices-on-a-16gb-laptop-no-kubernetes-590e): TDK overview and reproducible scale benchmark using the 100-service ERP example. **Community**
 
@@ -297,6 +304,16 @@ For current run state, open a workflow above. Result files are point-in-time rec
 
 - [TDK demo animation](https://github.com/tdk-landscape/tdk-demo-animation): source for a short visual tour of the CLI workflow and generated project ([view the animation](https://tdk-landscape.github.io/tdk-demo-animation/)). **Official**
 
+## Agents and skills
+
+Use TDK from AI coding agents. Agents run `tdk up` locally; none of this is a deploy path.
+
+- [tdk-skills](https://github.com/tdk-landscape/tdk-skills): portable Agent Skills (`tdk-doctor`, `tdk-troubleshoot`, `layer-autoresearch`) plus `AGENTS.md` rule templates. Install with `npx skills add tdk-landscape/tdk-skills`. **Official**
+- [Agents guide](https://tdk-landscape.github.io/tdk-website/docs/agents/): how agents should drive the TDK CLI. **Official**
+- [Website llms.txt](https://tdk-landscape.github.io/tdk-website/llms.txt): machine-readable index of the TDK docs. **Official**
+- [tdk-skills llms.txt](https://github.com/tdk-landscape/tdk-skills/blob/main/llms.txt): index of every skill and rules template with raw URLs. **Official**
+- [Repository rule templates](https://github.com/tdk-landscape/tdk-skills/tree/main/rules): baseline `AGENTS.md` files for TDK project repos and for `tdk-cli-core` contributors. **Official**
+
 ## Notes and gists
 
 Short public notes. These are **not** product reviews.
@@ -318,7 +335,7 @@ Prefer [tdk-cli-core docs](https://github.com/tdk-landscape/tdk-cli-core/tree/ma
 | [Building an internal developer platform? Start with the local dev loop (open-source CLI)](https://gist.github.com/kburym/8c19fd35d154813ab2857cb88cae8e71) | [Permalink](https://gist.github.com/kburym/8c19fd35d154813ab2857cb88cae8e71) | idp | **Official** | [TDK project overview](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/project-overview.md) |
 | [Cut new-developer setup time from 2 days to 8 minutes (microservices onboarding)](https://gist.github.com/kburym/33987f91306a7dca491a785dbdd65d57) | [Permalink](https://gist.github.com/kburym/33987f91306a7dca491a785dbdd65d57) | onboarding | **Official** | [`tdk project example`](https://github.com/tdk-landscape/tdk-cli-core#quick-start) |
 | [Docker Compose vs Kubernetes locally: how to run microservices without a cluster (FAQ)](https://gist.github.com/kburym/7f87dda05cd796e3dc5b2cb960ff7e32) | [Permalink](https://gist.github.com/kburym/7f87dda05cd796e3dc5b2cb960ff7e32) | faq | **Official** | [TDK comparison docs](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/compare-honest.md) |
-| [Run 100 microservices locally in ~8 min, no Kubernetes — quick-start for TDK CLI](https://gist.github.com/kburym/f94342ec2d6b5a03a86f8d6a2553abd5) | [Permalink](https://gist.github.com/kburym/f94342ec2d6b5a03a86f8d6a2553abd5) | quickstart | **Official** | [Scale benchmark and caveats](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/scale-bench.md) |
+| [Run 100 microservices locally in ~8 min, no Kubernetes — quick-start for TDK CLI](https://gist.github.com/kburym/f94342ec2d6b5a03a86f8d6a2553abd5) | [Permalink](https://gist.github.com/kburym/f94342ec2d6b5a03a86f8d6a2553abd5) | quickstart | **Official** | [Scale benchmark and caveats](https://github.com/tdk-landscape/tdk-cli-core/blob/main/docs/benchmarks/scale-bench.md) |
 
 Maintainer notes: [kburym gists](https://gist.github.com/kburym) **Official**
 
